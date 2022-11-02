@@ -1,5 +1,8 @@
 # ESA Assignment 
 
+# Git URL
+
+"https://github.com/chethan180/ESA.git"
 
 ## API documentation
 
@@ -78,14 +81,21 @@ First, download or Fork+Clone this repository locally.
 
 The node.js code runs in integration with a mongodb atlas server. Go to https://www.mongodb.com/cloud/atlas to create your own database in an atlas server. Copy the connection string.
 
-In the product_api folder, create a .env file and add the following lines:<br>
+In the server folder, create a .env file and add the following lines:<br>
+
+# server
+
+
 
 ```
-DATABASE_URL=<your mongodb atlas database connection string>
-PORT=<port number for product api server>
+SECRET_MONGO_USER = <UserName>
+SECRET_MONGO_PSWD = <Password>
 ```
 
-In the user_cart_api folder, create a .env file and add the following lines:<br>
+
+In the server2 folder, create a .env file and add the following lines:<br>
+
+# server2
 
 ```
 DATABASE_URL=<your mongodb atlas database connection string>
@@ -93,7 +103,7 @@ PORT=<port number for user cart api server>
 PRODUCT_API_URL=http://localhost:<port number for product api server>/rest/v1
 ```
 
-Lastly, in the product_api and user_cart_api folders, run the following command to install all node.js dependencies:
+Lastly, in the server and server2 folders, run the following command to install all node.js dependencies:
 
 ```
 npm install
@@ -101,25 +111,12 @@ npm install
 
 # Run servers
 
-Inside the product_api or user_cart_api folder, run the following command to execute the server.js file:
+Inside the server and server2 folder, run the following command to execute the index.js and server.js file:
 
 ```
 npm start
 ```
 
-Output :
 
-```
-> product_api@1.0.0 start
-> nodemon server.js
-
-[nodemon] 2.0.20
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching dir(s): *.*
-[nodemon] watching extensions: js,mjs,json
-[nodemon] starting `node server.js`
-product_api RESTful API server started on: 8080
-
-```
 
 
